@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  color: red;
+}
+
+body {
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80vh;
+  width: 100vw;
+}
+
+#container {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #212121;
+}
+
+.section {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 5rem;
+  color: white;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 1.1rem;
+  border: none;
+  width: 10rem;
+}
+
+/* @media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+} */
