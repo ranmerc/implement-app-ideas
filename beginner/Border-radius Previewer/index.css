@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Raleway:wght@700&display=swap');
+
+:root {
+  --dark-0dp: #121212;
+  --dark-1dp: #1e1e1e;
+  --dark-2dp: #222222;
+  --dark-3dp: #242424;
+  --dark-4dp: #272727;
+  --dark-6dp: #2c2c2c;
+  --dark-8dp: #2e2e2e;
+  --dark-12dp: #333333;
+  --dark-16dp: #343434;
+  --dark-18dp: #383838;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  height: 100vh;
+}
+
+#container {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--dark-0dp);
+}
+
+#box {
+  width: 10rem;
+  height: 10rem;
+  background-color: #6114e5;
+}
+
+#title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  letter-spacing: 0.1rem;
+}
+
+.copy {
+  background-color: var(--dark-6dp);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0.6rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.copy_title {
+  font-family: 'IBM Plex Mono', monospace;
+  margin-left: 0.5rem;
+}
+
+#input_container {
+  background-color: var(--dark-6dp);
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+}
+
+.subcontainer_title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  grid-area: title;
+}
+
+.subcontainer {
+  display: grid;
+  grid-template-columns: repeat(2, 8fr) 1fr;
+  grid-template-areas: 'title title title';
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.subcontainer:nth-of-type(1) {
+  margin-bottom: 2rem;
+}
+
+.property_title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.2rem;
+}
+
+.property {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.property_input {
+  justify-self: end;
+}
+
+.link_icon {
+  justify-self: center;
+  cursor: pointer;
+}
+
+input {
+  width: 3rem;
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  font-size: 1.1rem;
+  text-align: right;
+}
+
+select {
+  background-color: var(--dark-8dp);
+  border: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .subcontainer {
+    all: unset;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    row-gap: 0.5rem;
+    grid-template-areas:
+      'title title'
+      '. icon1'
+      '. icon1'
+      '. icon2'
+      '. icon2';
+  }
+  .link_icon:nth-of-type(1) {
+    grid-area: icon1;
+    align-self: center;
+  }
+  .link_icon:nth-of-type(2) {
+    grid-area: icon2;
+    align-self: center;
+  }
+  #input_container {
+    padding: 1rem 1rem;
+  }
+}
+
+/* unables children to recieve click event */
+.copy > * {
+  pointer-events: none;
+}
+
+.done {
+  background-color: green;
+}

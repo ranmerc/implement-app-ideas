@@ -54,13 +54,9 @@ body {
 
 input {
   padding: 0.5rem 1rem;
-  border-radius: 1.1rem;
+  border-radius: 0.2rem;
   border: none;
   width: 10rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bolder;
 }
-
-/* @media screen and (max-width: 768px) {
-  .title {
-    font-size: 4rem;
-  }
-} */
