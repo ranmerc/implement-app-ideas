@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Raleway:wght@700&display=swap');
+
+:root {
+  --dark-0dp: #121212;
+  --dark-1dp: #1e1e1e;
+  --dark-2dp: #222222;
+  --dark-3dp: #242424;
+  --dark-4dp: #272727;
+  --dark-6dp: #2c2c2c;
+  --dark-8dp: #2e2e2e;
+  --dark-12dp: #333333;
+  --dark-16dp: #343434;
+  --dark-18dp: #383838;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.status-down {
+  background-color: red;
+}
+
+.status-up {
+  background-color: green;
+}
+
+.up {
+  color: green;
+}
+
+.down {
+  color: red;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  background-color: var(--dark-0dp);
+  display: grid;
+  justify-items: center;
+}
+
+#container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+#status-banner {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border-radius: 0.3rem;
+  display: flex;
+}
+
+#status-banner i {
+  font-size: 1.5rem;
+}
+
+#status-banner span {
+  font-size: 1.2rem;
+  margin-left: 0.7rem;
+}
+
+.status-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.05rem;
+  align-self: flex-start;
+}
+
+#component-container {
+  background-color: var(--dark-8dp);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.component .name {
+  font-size: 1.4rem;
+  grid-area: name;
+  font-weight: 700;
+}
+
+.component .description {
+  font-size: 0.8rem;
+  grid-area: description;
+  display: flex;
+  align-items: center;
+}
+
+.component .material-icons {
+  grid-area: icon;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.component {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'name icon'
+    'description icon';
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid white;
+}
+
+.refresh {
+  padding: 0.6rem 1.2rem;
+  background-color: green;
+  font-family: 'Raleway', monospace;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1.1rem;
+}
+
+@media only screen and (max-width: 1368px) {
+  #component-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    row-gap: 2rem;
+  }
+  #container {
+    width: 90%;
+  }
+  #container > div {
+    margin-bottom: 2rem;
+  }
+  #title {
+    margin-top: 2rem;
+  }
+}
+
+.loader_wrapper {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+  border-radius: 100%;
+  animation: fade 1s infinite ease-in-out;
+}
+
+@keyframes fade {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
