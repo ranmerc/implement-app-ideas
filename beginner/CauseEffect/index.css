@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=Raleway:wght@700&display=swap');
+
+:root {
+  --dark-0dp: #121212;
+  --dark-1dp: #1e1e1e;
+  --dark-2dp: #222222;
+  --dark-3dp: #242424;
+  --dark-4dp: #272727;
+  --dark-6dp: #2c2c2c;
+  --dark-8dp: #2e2e2e;
+  --dark-12dp: #333333;
+  --dark-16dp: #343434;
+  --dark-18dp: #383838;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: var(--dark-0dp);
+  position: relative;
+  height: 100vh;
+}
+
+.selected {
+  color: #03dac6;
+}
+
+#container {
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+div.expand {
+  display: none;
+}
+
+#title {
+  font-family: 'Raleway', sans-serif;
+  font-size: calc(2.5rem + 2vw);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-top: 2vw;
+  color: #bb86fc;
+}
+
+#sub_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#summary {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  background-color: var(--dark-8dp);
+  padding: 1rem;
+  border-radius: 1rem;
+  align-items: center;
+}
+
+.summary_item {
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  font-size: calc(0.6rem + 1vw);
+  cursor: pointer;
+}
+
+.summary_item:hover {
+  background-color: white;
+  color: var(--dark-8dp);
+}
+
+#content {
+  background-color: var(--dark-8dp);
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.content_card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    'title title'
+    'name name';
+}
+
+.content_title {
+  font-family: 'IBM Plex Mono';
+  font-weight: 700;
+  font-size: calc(1.2rem + 0.5vw);
+  grid-area: title;
+  border-bottom: 1px solid #bb86fc;
+  color: #bb86fc;
+}
+
+.content_card > :nth-of-type(2n) {
+  grid-area: name;
+  align-self: center;
+  font-family: 'IBM Plex Mono';
+}
+
+@media only screen and (max-width: 1200px) {
+  #summary {
+    display: absolute;
+    transform: scale(0);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 3rem;
+    justify-content: center;
+  }
+  .summary_item {
+    font-size: calc(1rem + 1vh);
+  }
+  div.expand {
+    display: inline;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 3rem;
+  }
+}

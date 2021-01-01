@@ -59,4 +59,9 @@ input {
   width: 10rem;
   font-family: 'Raleway', sans-serif;
   font-weight: bolder;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
 }
