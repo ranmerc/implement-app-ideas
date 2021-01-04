@@ -25,6 +25,7 @@ body {
   background-color: var(--dark-0dp);
   position: relative;
   height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .selected {

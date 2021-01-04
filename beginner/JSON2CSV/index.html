@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>JSON2CSV</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">JSON2CSV</div>
+      <div id="top">
+        <div class="title">
+          Paste your JSON here or
+          <input type="file" id="file" hidden accept=".json" />
+          <label for="file">Upload File</label>
+          <span id="filename"></span>
+        </div>
+        <div class="input">
+          <textarea id="from"></textarea>
+          <div class="error top">Invalid JSON!</div>
+        </div>
+        <div class="buttons">
+          <div id="convert" class="button">Convert</div>
+          <div id="clear" class="button">Clear</div>
+        </div>
+      </div>
+      <div id="bottom">
+        <div class="title">Equivalent CSV</div>
+        <div class="input">
+          <textarea id="to" readonly></textarea>
+          <!-- Unable to save or Textbox Empty-->
+          <div class="error bottom"></div>
+          <div class="notif"></div>
+        </div>
+        <div class="buttons">
+          <div id="save" class="button">Save</div>
+          <div id="copy" class="button">Copy</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
