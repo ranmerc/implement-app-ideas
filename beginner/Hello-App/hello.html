@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="hello.css" />
+    <script src="hello.js" defer></script>
+    <title>Welcome</title>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path
+        fill="#000"
+        fill-opacity="1"
+        d="M0,160L80,181.3C160,203,320,245,480,245.3C640,245,800,203,960,202.7C1120,203,1280,245,1360,266.7L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+      ></path>
+    </svg>
+    <div id="container">
+      <div id="greeting">
+        <span id="hello"></span>
+        <span id="username"></span>,
+        <div>you have successfully logged in!</div>
+      </div>
+      <div id="fields">
+        <div class="field">
+          <div>IP Address</div>
+          <div class="field_value" id="ip"></div>
+        </div>
+        <div class="field">
+          <div>City</div>
+          <div class="field_value" id="city"></div>
+        </div>
+        <div class="field">
+          <div>Region</div>
+          <div class="field_value" id="region"></div>
+        </div>
+        <div class="field">
+          <div>Country</div>
+          <div class="field_value" id="country"></div>
+        </div>
+        <div class="field">
+          <div>Currency</div>
+          <div class="field_value" id="currency"></div>
+        </div>
+        <div class="field">
+          <div>Longitude</div>
+          <div class="field_value" id="long"></div>
+        </div>
+        <div class="field">
+          <div>Latitude</div>
+          <div class="field_value" id="lat"></div>
+        </div>
+        <div class="field">
+          <div>Time Zone</div>
+          <div class="field_value" id="tz"></div>
+        </div>
+      </div>
+      <div id="logout">Logout</div>
+    </div>
+    <div class="loader">
+      <div class="loading"></div>
+    </div>
+    <div class="bye"></div>
+  </body>
+</html>

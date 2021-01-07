@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  margin: 1rem 2rem;
+  width: fit-content;
+}
+
+#greeting {
+  font-size: calc(2rem + 0.5vw);
+}
+
+#fields {
+  display: grid;
+  row-gap: 1rem;
+  font-size: calc(1rem + 0.5vw);
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.field_value {
+  justify-self: flex-end;
+  text-align: right;
+}
+
+#logout {
+  background: black;
+  color: white;
+  width: fit-content;
+  padding: 0.2rem 0.5rem;
+  margin: auto;
+  font-size: calc(1rem + 0.5vw);
+  cursor: pointer;
+  outline: 1px solid black;
+}
+
+#logout:hover {
+  background: white;
+  color: black;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  display: grid;
+  place-items: center;
+}
+
+.loading {
+  background-color: black;
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  animation: fade 1s infinite;
+}
+
+@keyframes fade {
+  from {
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.bye {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  place-items: center;
+  font-size: calc(1.5rem + 1vw);
+}
+
+.flag {
+  width: 2.5rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}
