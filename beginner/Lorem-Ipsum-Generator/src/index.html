@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+    <title>Lorem-Ipsum-Generator</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">Lorem Ipsum Generator</div>
+      <div id="interact">
+          <div id="input">
+            <input type="text" id="no_para" value=1></input>
+            <select id="type">
+              <option value="para">PARAGRAPHS</option>
+              <option value="sent">SENTENCES</option>
+              <option value="words">WORDS</option>
+            </select>
+          </div>
+          <div id="generate_container">
+            <div id="generate">GENERATE!</div>
+          </div>
+      </div>
+      <div id="output_container">
+        <textarea id="output"></textarea>
+      </div>
+      <div id="copy_container">
+        <div id="copy">COPY</div>
+        <i class="material-icons">file_copy</i>
+      </div>
+    </div>
+  </body>
+</html>
