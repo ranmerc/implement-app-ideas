@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Zilla+Slab:wght@700&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+#container {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-areas:
+    'title'
+    'stats';
+}
+
+#title {
+  font-family: 'Zilla Slab', serif;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  grid-area: title;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#stat_container {
+  grid-area: stats;
+  width: 45%;
+  justify-self: center;
+  background-color: rgba(216, 216, 216, 0.7);
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+}
+
+#key {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#key_value {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+#key_code {
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+#indicators {
+  display: grid;
+  place-content: center;
+  grid-template-columns: 0.7fr;
+  row-gap: 1rem;
+}
+
+#indicators > div {
+  display: flex;
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.indicator_title {
+  font-family: 'Montserrat', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.indicator_value {
+  font-family: 'Montserrat', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  justify-self: flex-end;
+}
+
+.indicator_value::first-letter {
+  text-transform: uppercase;
+}
+
+#unavailable {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  font-family: 'Montserrat', serif;
+  font-size: 1.7rem;
+  display: none;
+  z-index: 1;
+}
+
+@media (hover: none) {
+  #unavailable {
+    display: grid;
+    place-content: center;
+  }
+}
+
+#warning {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  font-family: 'Montserrat', serif;
+  font-size: 1.7rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+}
+
+#warning > .warn {
+  text-align: center;
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  font-weight: 700;
+}

@@ -17,7 +17,7 @@ Used to get the current [github status](https://www.githubstatus.com/) in json f
 ## Install
 
     $ git clone https://github.com/deadmercury/implement-app-ideas
-    $ cd implement-app-ideas/begginer/Github\ Status
+    $ cd implement-app-ideas/beginner/Github\ Status
     $ npm install
 
 I had parcel installed globally so it is not included in package.json file so if you do not have parcel installed you may also want to do -
@@ -32,4 +32,4 @@ Targets src/index.html outputs to dist/ and starts a dev server on port 1234.
 
     $ npm run build
 
-Builds the production version of the app and outputs to build/. Cache folder is deleted because of this [issue](https://github.com/parcel-bundler/parcel/issues/2692) and public url is used for this [issue](https://github.com/parcel-bundler/parcel/issues/323).
+Builds the production version of the app and outputs to build/. Cache folder is deleted because of this [issue](https://github.com/parcel-bundler/parcel/issues/2692) and public url is used because of this [issue](https://github.com/parcel-bundler/parcel/issues/323).
