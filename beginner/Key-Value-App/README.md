@@ -36,6 +36,8 @@ Builds the production version of the app and outputs to build/. Cache folder is 
 
 ## References
 
+- Design on [Figma](https://www.figma.com/file/kvSMCP97Tz6kG55DBpNpAb/Key-App).
+
 - How to code CSS media queries targeting ALL mobile devices and tablets? on [Stack Overflow](https://stackoverflow.com/a/42835826).
 
 - KeyboardEvent on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent).

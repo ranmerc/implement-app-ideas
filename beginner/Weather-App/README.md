@@ -10,6 +10,8 @@ A Simple Mobile Weather App based on project idea from [app-ideas repo](https://
 
 ## References
 
+- Design on [Figma](https://www.figma.com/file/zMTWoR6OCqLNN3uaVNqgNI/Weather-App).
+
 - SVGs from [freeicons.io](https://freeicons.io/).
 
 - localStorage on [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage).

@@ -6,3 +6,4 @@ cd $1
 touch index.css
 touch index.html
 touch index.js
+touch README.md

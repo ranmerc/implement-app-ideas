@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Christmas Lights</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">Christmas Lights</div>
+      <div id="tree">
+        <div class="light even"></div>
+        <div class="light odd"></div>
+        <div class="light even"></div>
+        <div class="light odd"></div>
+        <div class="light even"></div>
+        <div class="light odd"></div>
+        <div class="light even"></div>
+      </div>
+      <div id="buttons">
+        <button class="resume">ON</button>
+        <button class="stop">OFF</button>
+      </div>
+      <div id="intensity">
+        <div>Intensity</div>
+        <input type="number" class="int_value" value="1" min="0" />
+      </div>
+      <div id="num_of_bulbs">
+        <span># Bulbs</span>
+        <select id="num">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7" selected>7</option>
+        </select>
+      </div>
+      <input type="color" id="c1" value="#ff0000" />
+      <input type="color" id="c2" value="#ffa500" />
+      <input type="color" id="c3" value="#ffff00" />
+      <input type="color" id="c4" value="#008000" />
+      <input type="color" id="c5" value="#0000ff" />
+      <input type="color" id="c6" value="#4b0082" />
+      <input type="color" id="c7" value="#ee82ee" />
+    </div>
+  </body>
+</html>

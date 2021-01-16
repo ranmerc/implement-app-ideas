@@ -36,6 +36,7 @@ Builds the production version of the app and outputs to build/. Cache folder is 
 
 ## References
 
+- Design on [Figma](https://www.figma.com/file/ajSZIO7J5BYfKEQerZnCLv/Lorem-Ipsum-Generator).
 - How to remove the default arrow icon from a dropdown list (select element)? on
   [Stack Overflow](https://stackoverflow.com/a/20464860).
 - Outline radius? on [Stack Overflow](https://stackoverflow.com/a/6810937).

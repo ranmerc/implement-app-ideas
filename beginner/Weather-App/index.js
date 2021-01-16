@@ -85,10 +85,10 @@ async function updateDOM(res, city) {
       .setAttribute('title', res.daily[i + 1].weather[0].description);
 
     forecastTile[i].querySelector('.highest').textContent =
-      res.daily[i + 1].temp.max;
+      res.daily[i + 1].temp.max + '°';
 
     forecastTile[i].querySelector('.lowest').textContent =
-      res.daily[i + 1].temp.min;
+      res.daily[i + 1].temp.min + '°';
   }
 }
 
