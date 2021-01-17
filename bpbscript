@@ -1,4 +1,4 @@
-# Beginner Project Script
+# Beginner Project Broilerplate Script
 # run by . bpbscript <project-name>
 cd beginner
 mkdir $1
@@ -7,3 +7,4 @@ touch index.css
 touch index.html
 touch index.js
 touch README.md
+echo '# '$1 > README.md
