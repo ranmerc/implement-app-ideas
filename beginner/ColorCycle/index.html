@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css" />
+    <title>ColorCycle</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">ColorCycle</div>
+      <div id="box"></div>
+      <div id="panel">
+        <div id="color_panel" class="panels">
+          <select id="color_type" class="label">
+            <option value="hex">hex</option>
+            <option value="hsl">hsl</option>
+          </select>
+          <div id="color_first">
+            <input type="text" value="0" />
+          </div>
+          <div id="color_second">
+            <input type="text" value="0" />
+          </div>
+          <div id="color_third">
+            <input type="text" value="0" />
+          </div>
+        </div>
+        <div id="increment_panel" class="panels">
+          <span class="label">Increment</span>
+          <input type="text" id="increment_first" value="1" />
+          <input type="text" id="increment_second" value="1" />
+          <input type="text" id="increment_third" value="1" />
+        </div>
+        <div id="interval_panel">
+          <span class="label">Interval</span>
+          <div>
+            <select id="interval">
+              <option value="0.25">0.25</option>
+              <option value="0.50">0.50</option>
+              <option value="0.75">0.75</option>
+              <option value="1.00">1.00</option>
+              <option value="1.25">1.25</option>
+              <option value="1.50">1.50</option>
+              <option value="1.75">1.75</option>
+              <option value="2.00">2.00</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="generate">Start</div>
+    </div>
+  </body>
+</html>

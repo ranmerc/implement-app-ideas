@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+:root {
+  --title-font-size: 3rem;
+  --box-size: 12rem;
+  --label-font-size: 1.7rem;
+}
+
+#container {
+  display: grid;
+  row-gap: 2rem;
+}
+
+#title {
+  margin-top: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: var(--title-font-size);
+}
+
+#box {
+  width: var(--box-size);
+  height: var(--box-size);
+  background-color: black;
+  justify-self: center;
+  transition: background-color 250ms ease;
+}
+
+#box.color_hex {
+  background-color: var(--hex);
+}
+
+#box.color_hsl {
+  background-color: hsl(var(--fv), var(--sv), var(--tv));
+}
+
+#panel {
+  display: grid;
+  row-gap: 1.5rem;
+}
+
+#color_panel,
+#increment_panel {
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  row-gap: 0.5rem;
+  column-gap: 0.5rem;
+  justify-content: center;
+}
+
+.label {
+  justify-self: center;
+  border: none;
+  grid-column: 1 / 4;
+  font-size: var(--label-font-size);
+}
+
+.label.disabled {
+  color: #6d6d6d;
+}
+
+#color_type option {
+  font-size: 0.8rem;
+}
+
+#color_panel input,
+#increment_panel input {
+  height: 2rem;
+  border: 2px solid black;
+  width: 4rem;
+  text-align: center;
+}
+
+#color_panel > div::after {
+  content: attr(data-after);
+  font-size: 1.1rem;
+  color: darkgrey;
+  vertical-align: middle;
+}
+
+#interval_panel {
+  display: grid;
+  row-gap: 0.5rem;
+  position: relative;
+}
+
+#interval_panel > div::after {
+  content: 's';
+  font-size: 1.1rem;
+  color: darkgrey;
+  vertical-align: middle;
+}
+
+#interval_panel > div {
+  grid-column: 1 / 4;
+  justify-self: center;
+}
+
+#interval {
+  width: fit-content;
+  border: none;
+  font-size: 1.1rem;
+}
+
+#interval > option {
+  font-size: 0.9rem;
+}
+
+#generate {
+  justify-self: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  transition: color 250ms ease, background-color 250ms ease;
+}
+
+#generate:focus,
+#generate:hover {
+  background-color: white;
+  color: black;
+  outline: 2px solid black;
+  outline-offset: 0.1rem;
+}
+
+@media only screen and (min-width: 500px) {
+  :root {
+    --title-font-size: 5rem;
+  }
+}
