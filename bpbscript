@@ -7,4 +7,6 @@ touch index.css
 touch index.html
 touch index.js
 touch README.md
-echo '# '$1 > README.md
+echo '# '$1 | sed "s/-/ /g" > README.md
+echo '## 'References >> README.md
+cd ../..
