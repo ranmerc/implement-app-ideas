@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Javascript Validation with Regex</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="heading-section">
+        <div id="main-heading">Welcome</div>
+        <div id="sub-heading">Login to Continue</div>
+      </div>
+      <div id="svg-section"></div>
+      <div id="form-section">
+        <form action="javascript:void(0)">
+          <div>
+            <label for="email">Email Address</label>
+            <input type="text" id="email" />
+            <div class="error">Only @gmail allowed.</div>
+          </div>
+          <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" />
+            <div class="error">Only letters with no spaces.</div>
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" />
+            <div class="error">
+              Requires five(5) capital letters, six (6) symbols and two hyphens
+              (-) in any order.
+            </div>
+          </div>
+          <input type="submit" value="Login" />
+        </form>
+      </div>
+    </div>
+    <div id="modal-bg">
+      <div id="modal">
+        <div id="modal-heading">Congratulations!</div>
+        <div id="modal-message">You sucessfully signed in!</div>
+        <button id="signout">
+          <a href="javascript:location.reload()">Sign Out</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

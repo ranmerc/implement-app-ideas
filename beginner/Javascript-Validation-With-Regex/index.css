@@ -1,0 +1,181 @@
+@import url('../../fonts/Open_Sans/Open Sans.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: grid;
+  margin: 2rem;
+  row-gap: 1rem;
+}
+
+#svg-section {
+  background: url(./undraw_Login_re_4vu2.svg) no-repeat;
+  height: 14rem;
+  background-position: center;
+  background-size: contain;
+  margin-top: 1rem;
+}
+
+form {
+  display: grid;
+  row-gap: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+form > div > input {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  border: none;
+  border: 1px solid #6c63ff;
+  padding: 0.5rem 1rem;
+  color: rgb(52, 65, 88);
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  width: 100%;
+  caret-color: #6c63ff;
+}
+
+form > div > input:focus {
+  box-shadow: 0 0 0 2px #6c63ff;
+  outline: none;
+  background-color: white;
+}
+
+input[type='submit'] {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  justify-self: center;
+  padding: 0.2rem 1rem;
+  border-radius: 0.3rem;
+  border: none;
+  color: #6c63ff;
+  border: 2px solid #6c63ff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  background-color: white;
+}
+
+input[type='submit']:hover,
+#signout > a:hover,
+#signout:hover {
+  color: white;
+  background-color: #6c63ff;
+}
+
+label {
+  color: #6c63ff;
+  font-weight: 800;
+}
+
+*::placeholder {
+  color: #d3d3d3;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: red;
+  opacity: 0;
+}
+
+#heading-section {
+  font-family: 'Open Sans', sans-serif;
+  color: #6c63ff;
+}
+
+#main-heading {
+  font-size: 3.8rem;
+  font-weight: 900;
+}
+
+#sub-heading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-left: 0.5rem;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#signout {
+  border: 2px solid #6c63ff;
+  padding: 0.2rem 0.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+#modal-heading {
+  font-size: 2rem;
+  color: #6c63ff;
+  font-weight: 800;
+}
+
+@media only screen and (min-width: 800px) {
+  body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    overflow: none;
+  }
+  #container {
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+      'heading svg'
+      'form svg';
+    border-radius: 1rem;
+    box-shadow: 0 0 18px -6px black;
+  }
+
+  #heading-section {
+    grid-area: heading;
+  }
+
+  #form-section {
+    grid-area: form;
+  }
+
+  #svg-section {
+    grid-area: svg;
+    height: 100%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
