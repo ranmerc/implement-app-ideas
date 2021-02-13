@@ -1,0 +1,148 @@
+@import url('../../fonts/Montserrat/Montserrat.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #f2f3f4;
+}
+
+#container {
+  --arrow-size: 10px;
+  --arrow-color: #00958c;
+  display: grid;
+  row-gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+  justify-items: center;
+}
+
+#title {
+  font-weight: 800;
+  font-size: 2.3rem;
+  text-align: center;
+  color: #00958c;
+}
+
+img {
+  --img-size: 7rem;
+  height: var(--img-size);
+  width: var(--img-size);
+  transition: transform 1s;
+}
+
+#image_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  padding: 0.5rem;
+}
+
+.arrow {
+  height: 0;
+  width: 0;
+  justify-self: center;
+  cursor: pointer;
+  border: none;
+  align-self: center;
+}
+
+.arrow:focus {
+  outline: 2px solid #00958c;
+}
+
+.images {
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-areas:
+    'up up up'
+    'left photo right'
+    'down down down';
+}
+
+.up_arrow {
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size) solid var(--arrow-color);
+  grid-area: up;
+}
+
+.down_arrow {
+  border-top: var(--arrow-size) solid var(--arrow-color);
+  border-left: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid transparent;
+  grid-area: down;
+}
+
+.left_arrow {
+  border-top: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size) solid transparent;
+  border-right: var(--arrow-size) solid var(--arrow-color);
+  grid-area: left;
+}
+
+.right_arrow {
+  border-top: var(--arrow-size) solid transparent;
+  border-bottom: var(--arrow-size) solid transparent;
+  border-left: var(--arrow-size) solid var(--arrow-color);
+  grid-area: right;
+}
+
+#input_container {
+  display: grid;
+  width: fit-content;
+}
+
+.error {
+  color: red;
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.7rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+}
+
+#image_url {
+  font-size: 1.2rem;
+  text-align: center;
+  border-style: solid;
+  border-color: #00958c;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  color: darkslategray;
+  font-weight: 500;
+  caret-color: #00958c;
+}
+
+#image_url:focus {
+  outline: none;
+  border-color: #00958c;
+  background-color: white;
+  box-shadow: 0 0 0 2px #00958c;
+}
+
+#load_url {
+  border: none;
+  background-color: #00958c;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: fit-content;
+  justify-self: center;
+  padding: 0.25em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#load_url:focus {
+  outline: none;
+  box-shadow: 0 0 7px 2px #00958c;
+}
