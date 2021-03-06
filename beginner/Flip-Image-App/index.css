@@ -47,6 +47,7 @@ img {
 .arrow {
   height: 0;
   width: 0;
+  background-color: #f2f3f4;
   justify-self: center;
   cursor: pointer;
   border: none;
@@ -137,7 +138,7 @@ img {
   font-size: 1.2rem;
   width: fit-content;
   justify-self: center;
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   border-radius: 5px;
   cursor: pointer;
 }

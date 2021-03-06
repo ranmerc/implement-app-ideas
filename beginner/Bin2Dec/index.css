@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap');
+@import url('../../fonts/IBM_Plex_Mono/IBM\ Plex\ Mono.css');
+@import url('../../fonts/Raleway/Raleway.css');
 
 *,
 *::after,
@@ -41,6 +41,7 @@ body {
 .label {
   font-size: 1.5rem;
   font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   color: white;
   margin-bottom: 0.7rem;
   text-align: center;
@@ -48,6 +49,7 @@ body {
 
 .title {
   font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
   font-size: 5rem;
   color: white;
 }
@@ -58,6 +60,7 @@ input {
   border: none;
   width: 10rem;
   font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   font-weight: bolder;
   text-align: center;
 }

@@ -1,0 +1,221 @@
+@import url('../../fonts/Roboto/Roboto.css');
+@import url('../../fonts/Open_Sans/Open\ Sans.css');
+@import url('../../fonts/Zilla_Slab/Zilla\ Slab.css');
+@import url('../../fonts/Montserrat/Montserrat.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --interact-title-size: 2.7rem;
+  --interact-button-size: 1.1rem;
+  --secondary-color: #6b5e5e;
+  --primary-color: #199577;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.recipe * {
+  animation-name: fade-up;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.interact {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 1.1rem;
+}
+
+.interact::after {
+  content: '';
+  position: absolute;
+  display: block; /* block onClick*/
+  height: 2px;
+  width: 50%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #808080;
+}
+
+.interact__title {
+  color: #262626;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: var(--interact-title-size);
+  text-align: center;
+}
+
+button {
+  background-color: #199577;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  width: fit-content;
+}
+
+button:focus {
+  outline: 2px solid #199577;
+  outline-offset: 2px;
+}
+
+button:not(:focus):hover {
+  box-shadow: 0 0 0 1px white, 0 0 0 3px #199577;
+}
+
+.interact__button {
+  padding: 0.8rem 1.3rem;
+  font-size: var(--interact-button-size);
+}
+
+.recipe {
+  display: grid;
+  gap: 1rem;
+  height: 0;
+  transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recipe__details {
+  margin-top: 3rem;
+  display: grid;
+  justify-items: center;
+  gap: 0.8rem;
+}
+
+.recipe__name {
+  color: #199577;
+  font-family: 'Zilla Slab', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.recipe__attributes {
+  text-align: center;
+}
+
+.attribute_name {
+  font-family: 'Zilla Slab', serif;
+  color: #199577;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.attribute_value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.recipe__subtitles {
+  all: unset;
+  font-family: 'Zilla Slab', sans-serif;
+  font-size: 2.1rem;
+  text-decoration: underline;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.recipe__ingredients,
+.recipe__recipe,
+.recipe__video {
+  display: grid;
+  gap: 1rem;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.ingredients {
+  list-style-type: disc;
+}
+
+.ingredients > li,
+.instructions {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: var(--secondary-color);
+  font-size: 1.05rem;
+  margin-left: 2rem;
+}
+
+li::marker {
+  font-size: 1.5rem;
+}
+
+.instructions {
+  margin-left: 0.5rem;
+}
+
+.recipe__photo {
+  width: 50%;
+  height: 200px;
+}
+
+iframe {
+  margin-left: 0.5rem;
+  width: 98%;
+  height: 15rem;
+  margin-bottom: 2rem;
+}
+
+@keyframes loader {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  :root {
+    --interact-title-size: 3.3rem;
+    --interact-button-size: 1.1rem;
+  }
+
+  .recipe__photo {
+    width: 40%;
+    height: 30rem;
+  }
+
+  iframe {
+    height: 30rem;
+  }
+
+  .recipe__ingredients,
+  .recipe__recipe,
+  .recipe__video {
+    width: 60%;
+  }
+
+  .interact::after {
+    width: 30%;
+  }
+}

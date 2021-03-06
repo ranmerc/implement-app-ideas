@@ -166,10 +166,9 @@ async function resolveCity(e) {
           throw new Error('API Down 🤷‍♀️');
         }
       } catch (e) {
-        alert('Unable to Fetch Location');
+        alert('Unable to Fetch Location 😭');
         city = 'Pune';
         console.error(e);
-        return;
       }
     }
   }
