@@ -1,0 +1,81 @@
+@import url('../../fonts/Montserrat/Montserrat.css');
+@import url('../../fonts/Open_Sans/Open\ Sans.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  position: relative;
+  background-color: #121212;
+  height: 100vh;
+  display: grid;
+  align-content: center;
+}
+
+#title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #00ffa3;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 15ch;
+  transform-origin: 0 0;
+  margin-left: 0.8rem;
+  transform: rotate(-90deg) translateX(-40%);
+}
+
+main {
+  margin-left: 5rem;
+}
+
+.cents {
+  margin-bottom: 0.8rem;
+}
+
+#input {
+  font-family: 'Open Sans', sans-serif;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  font-family: inherit;
+  font-size: 2.2rem;
+  border: none;
+  width: 4ch;
+  font-weight: 700;
+  background-color: #121212;
+  transition: width 150ms linear;
+}
+
+input:focus {
+  outline-offset: 0.2rem;
+  outline: 4px solid #00ffa3;
+}
+
+#input::after {
+  content: '$';
+  margin-left: 1rem;
+  font-weight: 800;
+  color: #00ffa3;
+  font-size: 2rem;
+  vertical-align: baseline;
+}
+
+.text,
+table {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+tr > td:nth-of-type(2) {
+  padding-left: 0.8rem;
+}

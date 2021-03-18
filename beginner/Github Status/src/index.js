@@ -1,4 +1,3 @@
-const { stat } = require('fs');
 const request = require('request');
 
 document.querySelector('.refresh').addEventListener('click', () => {
