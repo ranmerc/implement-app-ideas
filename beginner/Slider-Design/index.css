@@ -1,0 +1,112 @@
+@import url('../../fonts/Open_Sans/Open\ Sans.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #121212;
+}
+
+h1 {
+  color: #00f6f6;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+  justify-content: center;
+}
+
+main > div {
+  display: flex;
+  align-items: center;
+}
+
+.sliding-container {
+  height: 360px;
+  width: 480px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 1s;
+}
+
+svg {
+  fill: #00f6f6;
+}
+
+.arrow {
+  border: none;
+  background-color: transparent;
+  padding: 0.6rem 1rem 0.5rem 1rem;
+  width: fit-content;
+  border-radius: 100%;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 246, 246, 0.69);
+}
+
+.arrow:hover > svg {
+  fill: white;
+}
+
+.sliding {
+  position: relative;
+  background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+}
+
+*:after {
+  font-size: 2rem;
+  color: #f1f2f3;
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.sliding:nth-of-type(1):after {
+  content: 'Open Fields';
+}
+
+.sliding:nth-of-type(2):after {
+  content: 'City Skyscrapers';
+}
+
+.sliding:nth-of-type(3):after {
+  content: 'Plants';
+}
+
+.sliding:nth-of-type(4):after {
+  content: 'Architecture Papers';
+}
+
+.sliding:nth-of-type(5):after {
+  content: 'Misty Mountains';
+}
+
+img {
+  position: relative;
+  z-index: -1;
+}
+
+@media only screen and (min-width: 650px) {
+  main {
+    margin: 0 auto;
+  }
+}

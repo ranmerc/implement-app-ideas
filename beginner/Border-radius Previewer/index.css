@@ -40,6 +40,7 @@ body {
   width: 10rem;
   height: 10rem;
   background-color: #6114e5;
+  transition: border-radius 500ms ease;
 }
 
 #title {
