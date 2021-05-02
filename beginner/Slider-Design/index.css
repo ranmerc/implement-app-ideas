@@ -73,11 +73,10 @@ svg {
   color: #f1f2f3;
   font-family: 'Open Sans', sans-serif;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+  left: 20px;
+  bottom: 0;
+  transform: rotate(-90deg);
+  transform-origin: left;
 }
 
 .sliding:nth-of-type(1):after {

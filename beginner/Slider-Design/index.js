@@ -17,6 +17,6 @@ rightArrow.addEventListener('click', slideRight);
 
 leftArrow.addEventListener('click', slideLeft);
 
-setInterval(() => {
-  slideRight();
-}, 3000);
+// setInterval(() => {
+//   slideRight();
+// }, 5000);

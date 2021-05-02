@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Windchill</title>
+  </head>
+  <body>
+    <main>
+      <h1>
+        <span class="emoji">🥶</span>
+        Windchill Factor
+      </h1>
+      <form action="#">
+        <div class="_system grid">
+          <label for="system">Measurement System</label>
+          <select id="system">
+            <option value="celsius">Metric</option>
+            <option value="imperial">Imperial</option>
+          </select>
+        </div>
+        <div class="_temp grid">
+          <label for="temp">Air Temperature</label>
+          <input type="number" id="temp" required />
+          <span class="units"><sup>o</sup> Celsius</span>
+        </div>
+        <div class="_speed">
+          <label for="speed">Wind Speed</label>
+          <input type="number" id="speed" required />
+          <span class="units">kmph</span>
+        </div>
+        <div class="_formula">
+          <span>Formula Used : </span>
+          <span class="formula"
+            ><span
+              >13.12 + 0.6215T - 11.37v<sup>0.16</sup> + 0.3965Tv<sup
+                >0.16</sup
+              ></span
+            ></span
+          >
+        </div>
+        <div class="_button">
+          <input type="submit" value="Calculate" />
+        </div>
+      </form>
+      <div>Calculated Windchill Factor is <span class="windchill"></span></div>
+    </main>
+  </body>
+</html>
