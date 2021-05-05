@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Vigenere Cipher</title>
+  </head>
+  <body>
+    <header>
+      <h1>Vigenere Cipher</h1>
+    </header>
+    <main>
+      <input type="radio" id="encrypt" name="tab" checked />
+      <label for="encrypt">Encrypt</label>
+      <div class="encryption-container">
+        <div>
+          <label for="encrypt-plain">Plain Text</label>
+          <textarea id="encrypt-plain"></textarea>
+        </div>
+        <div>
+          <label for="encrypt-key">Encryption Key</label>
+          <textarea id="encrypt-key"></textarea>
+        </div>
+        <div>
+          <label for="encrypt-result">Encrypted Text</label>
+          <textarea id="encrypt-result"></textarea>
+        </div>
+      </div>
+      <input type="radio" id="decrypt" name="tab" />
+      <label for="decrypt">Decrypt</label>
+      <div class="decryption-container">
+        <div>
+          <label for="decrypt-plain">Encrypted Text</label>
+          <textarea id="decrypt-plain"></textarea>
+        </div>
+        <div>
+          <label for="decrypt-key">Decryption Key</label>
+          <textarea id="decrypt-key"></textarea>
+        </div>
+        <div>
+          <label for="decrypt-result">Decrypted Text</label>
+          <textarea id="decrypt-result"></textarea>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
