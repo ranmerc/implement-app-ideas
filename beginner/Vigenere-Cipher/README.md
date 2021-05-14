@@ -1,4 +1,4 @@
-# Vignere Cipher
+# Vigenere Cipher
 
 A simple Vigener Cipher Encoder-Decorder based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Vigenere-Cipher.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Vigenere-Cipher/index.html).
 

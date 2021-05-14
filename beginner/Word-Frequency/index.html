@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website to count word frequency">
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="./chart.min.js" defer></script>
+    <script src="./index.js" defer></script>
+    <title>Word Frequency</title>
+  </head>
+  <body>
+    <header>
+      <h1>Word Frequency</h1>
+    </header>
+    <form>
+      <label for="input-area">Enter Your Text Here</label>
+      <textarea id="input-area"></textarea>
+      <button id="load-template" class="button">Load Template</button>
+      <input type="reset" class="button" value="Clear"></input>
+      <input type="submit" class="button" value="Translate" />
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Word</th>
+          <th>Count</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <canvas></canvas>
+  </body>
+</html>
