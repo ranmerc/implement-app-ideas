@@ -3,6 +3,7 @@
   src: url('./Oxygen-Bold.ttf');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face{
@@ -10,6 +11,7 @@
   src: url('./Oxygen-Light.ttf');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face{
@@ -17,5 +19,6 @@
   src: url('./Oxygen-Regular.ttf');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
