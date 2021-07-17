@@ -13,10 +13,10 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/beginner/Bin2Dec/",
+  "start_url": "./",
   "background_color": "#121212",
   "display": "standalone",
-  "scope": "/beginner/Bin2Dec/",
+  "scope": ".",
   "theme_color": "#121212",
   "description": "Binary To Decimal Converter"
 }
