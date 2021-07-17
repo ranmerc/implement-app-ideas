@@ -30,7 +30,8 @@ self.addEventListener('fetch', (fetchEvent) => {
   const requestURL = new URL(request.url);
   const clientURL = new URL(allClients[0].url);
   if (requestURL.host === clientURL.host) {
-    if (requestURL.pathname.startsWith('/fonts/')) {
+    // temporary fix
+    if (requestURL.pathname.includes('/fonts/')) {
       fetchEvent.respondWith(
         (async () => {
           const responseFromCache = await caches.match(request);
