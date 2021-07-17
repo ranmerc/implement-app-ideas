@@ -1,0 +1,22 @@
+{
+  "name": "Bin2Dec",
+  "short_name": "B2D",
+  "icons": [
+    {
+      "src": "./icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "./icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/beginner/Bin2Dec/",
+  "background_color": "#121212",
+  "display": "standalone",
+  "scope": "/beginner/Bin2Dec/",
+  "theme_color": "#121212",
+  "description": "Binary To Decimal Converter"
+}
