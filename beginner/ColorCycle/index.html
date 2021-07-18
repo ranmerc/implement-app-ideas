@@ -3,38 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cycle through CSS colors" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./index.css" />
     <title>ColorCycle</title>
   </head>
   <body>
     <div id="container">
-      <div id="title">ColorCycle</div>
+      <h1 id="title">ColorCycle</h1>
       <div id="box"></div>
       <div id="panel">
         <div id="color_panel" class="panels">
-          <select id="color_type" class="label">
+          <span id="color_type_selector" hidden>Select Color Mode</span>
+          <select
+            id="color_type"
+            class="label"
+            aria-labelledby="color_type_selector"
+          >
             <option value="hex">hex</option>
             <option value="hsl">hsl</option>
           </select>
           <div id="color_first">
-            <input type="text" value="0" />
+            <span id="color_first_input" hidden
+              >Enter Value for first color</span
+            >
+            <input type="text" value="0" aria-labelledby="color_first_input" />
           </div>
           <div id="color_second">
-            <input type="text" value="0" />
+            <span id="color_second_input" hidden
+              >Enter Value for second color</span
+            >
+            <input type="text" value="0" aria-labelledby="color_second_input" />
           </div>
           <div id="color_third">
-            <input type="text" value="0" />
+            <span id="color_third_input" hidden
+              >Enter Value for third color</span
+            >
+            <input type="text" value="0" aria-labelledby="color_third_input" />
           </div>
         </div>
         <div id="increment_panel" class="panels">
           <span class="label">Increment</span>
-          <input type="text" id="increment_first" value="1" />
-          <input type="text" id="increment_second" value="1" />
-          <input type="text" id="increment_third" value="1" />
+          <span id="increment_first_label" hidden
+            >Enter Value for first increment</span
+          >
+          <input
+            type="text"
+            id="increment_first"
+            value="1"
+            aria-labelledby="increment_first_label"
+          />
+          <span id="increment_second_label" hidden
+            >Enter Value for second increment</span
+          >
+          <input
+            type="text"
+            id="increment_second"
+            value="1"
+            aria-labelledby="increment_second_label"
+          />
+          <span id="increment_third_label" hidden
+            >Enter Value for third increment</span
+          >
+          <input
+            type="text"
+            id="increment_third"
+            value="1"
+            aria-labelledby="increment_third_label"
+          />
         </div>
         <div id="interval_panel">
-          <span class="label">Interval</span>
+          <label for="interval" class="label">Interval</label>
           <div>
             <select id="interval">
               <option value="0.25">0.25</option>
@@ -49,7 +89,7 @@
           </div>
         </div>
       </div>
-      <div id="generate">Start</div>
+      <button id="generate">Start</button>
     </div>
   </body>
 </html>

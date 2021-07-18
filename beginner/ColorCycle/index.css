@@ -66,6 +66,16 @@
   font-size: var(--label-font-size);
 }
 
+#color_type,
+#interval {
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+#color_type:focus {
+  border-color: black;
+}
+
 .label.disabled {
   color: #6d6d6d;
 }
@@ -108,8 +118,7 @@
 }
 
 #interval {
-  width: fit-content;
-  border: none;
+  width: min-content;
   font-size: 1.1rem;
 }
 
@@ -118,6 +127,7 @@
 }
 
 #generate {
+  border: none;
   justify-self: center;
   font-size: 1.5rem;
   cursor: pointer;
@@ -125,6 +135,7 @@
   color: white;
   padding: 0.3rem 0.8rem;
   transition: color 250ms ease, background-color 250ms ease;
+  margin-bottom: 1rem;
 }
 
 #generate:focus,
