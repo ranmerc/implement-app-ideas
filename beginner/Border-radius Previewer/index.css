@@ -3,15 +3,8 @@
 
 :root {
   --dark-0dp: #121212;
-  --dark-1dp: #1e1e1e;
-  --dark-2dp: #222222;
-  --dark-3dp: #242424;
-  --dark-4dp: #272727;
   --dark-6dp: #2c2c2c;
   --dark-8dp: #2e2e2e;
-  --dark-12dp: #333333;
-  --dark-16dp: #343434;
-  --dark-18dp: #383838;
 }
 
 *,
@@ -24,14 +17,14 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #container {
-  height: 100%;
+  min-height: inherit;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  row-gap: 3rem;
   flex-direction: column;
   background-color: var(--dark-0dp);
 }
@@ -44,23 +37,28 @@ body {
 }
 
 #title {
+  margin-top: 1.5rem;
   font-family: 'Raleway', sans-serif;
   font-size: 3rem;
   color: white;
   text-align: center;
+  font-weight: 700;
   letter-spacing: 0.1rem;
 }
 
 .copy {
+  border: none;
   background-color: var(--dark-6dp);
   display: flex;
   justify-content: space-between;
   border-radius: 0.6rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 .copy_title {
+  font-size: 1rem;
   font-family: 'IBM Plex Mono', monospace;
   margin-left: 0.5rem;
 }
@@ -106,6 +104,8 @@ body {
 .link_icon {
   justify-self: center;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 input {

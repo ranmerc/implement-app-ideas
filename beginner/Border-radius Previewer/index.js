@@ -73,11 +73,26 @@ document.querySelector('.copy').addEventListener('click', (e) => {
   document.execCommand('copy');
   document.body.removeChild(el);
   e.target.querySelector('.copy_title').textContent = 'Copied';
-  e.target.querySelector('i').textContent = 'check_circle';
+  e.target.querySelector('.copy > img').src = './check_circle.svg';
   e.target.classList.add('done');
   setTimeout(() => {
     e.target.querySelector('.copy_title').textContent = 'Copy';
-    e.target.querySelector('i').textContent = 'content_copy';
+    e.target.querySelector('.copy > img').src = './copy_icon.svg';
     e.target.classList.remove('done');
   }, 2000);
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
 });
