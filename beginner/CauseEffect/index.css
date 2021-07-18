@@ -3,14 +3,7 @@
 
 :root {
   --dark-0dp: #121212;
-  --dark-1dp: #1e1e1e;
-  --dark-2dp: #222222;
-  --dark-3dp: #242424;
-  --dark-4dp: #272727;
-  --dark-6dp: #2c2c2c;
   --dark-8dp: #2e2e2e;
-  --dark-12dp: #333333;
-  --dark-16dp: #343434;
   --dark-18dp: #383838;
 }
 
@@ -38,8 +31,11 @@ body {
   grid-template-rows: 1fr 4fr;
 }
 
-div.expand {
+button.expand {
   display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 #title {
@@ -61,7 +57,7 @@ div.expand {
 #summary {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
-  background-color: var(--dark-8dp);
+  background-color: var(--dark-18dp);
   padding: 1rem;
   border-radius: 1rem;
   align-items: center;
@@ -126,12 +122,11 @@ div.expand {
   .summary_item {
     font-size: calc(1rem + 1vh);
   }
-  div.expand {
+  button.expand {
     display: inline;
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    font-size: 3rem;
   }
 }

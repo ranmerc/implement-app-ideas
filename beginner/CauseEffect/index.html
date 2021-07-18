@@ -3,18 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A demonstration of cause effect design" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="index.css" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
     <script src="index.js" defer></script>
     <title>CauseEffect</title>
   </head>
   <body>
     <div id="container">
-      <div id="title">Cause Effect</div>
+      <h1 id="title">Cause Effect</h1>
       <div id="sub_container">
         <div id="summary"></div>
         <div id="content">
@@ -45,6 +42,8 @@
         </div>
       </div>
     </div>
-    <div class="material-icons expand">keyboard_arrow_up</div>
+    <button class="expand">
+      <img src="./arrow_up.svg" alt="Up Arrow" height="40px" weight="40px" />
+    </button>
   </body>
 </html>
