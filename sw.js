@@ -3,11 +3,7 @@ const fontCacheName = '-font-cache';
 let allClients = [];
 
 self.addEventListener('install', (installEvent) => {
-  self.skipWaiting();
-});
-
-self.addEventListener('activate', async (activateEvent) => {
-  activateEvent.waitUntil(
+  installEvent.waitUntil(
     (async () => {
       const cacheNames = await caches.keys();
       cacheNames.forEach((cacheName) => {
@@ -18,9 +14,17 @@ self.addEventListener('activate', async (activateEvent) => {
           caches.delete(cacheName);
         }
       });
+    })()
+  );
+  self.skipWaiting();
+});
 
-      self.clients.claim();
-      allClients = await self.clients.matchAll();
+self.addEventListener('activate', async (activateEvent) => {
+  activateEvent.waitUntil(
+    (async () => {
+      self.clients.claim().then(() => {
+        self.clients.matchAll().then((res) => (allClients = res));
+      });
     })()
   );
 });
@@ -28,7 +32,7 @@ self.addEventListener('activate', async (activateEvent) => {
 self.addEventListener('fetch', (fetchEvent) => {
   const request = fetchEvent.request;
   const requestURL = new URL(request.url);
-  const clientURL = new URL(allClients[0].url);
+  const clientURL = allClients ? new URL(allClients[0].url) : 'notthehost';
   if (requestURL.host === clientURL.host) {
     // temporary fix
     if (requestURL.pathname.includes('/fonts/')) {
