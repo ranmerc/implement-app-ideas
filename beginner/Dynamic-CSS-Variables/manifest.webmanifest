@@ -1,0 +1,24 @@
+{
+  "name": "Dynamic CSS Variables",
+  "short_name": "CSS Vars",
+  "icons": [
+    {
+      "src": "./icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#fff",
+  "display": "standalone",
+  "scope": ".",
+  "theme_color": "#000",
+  "description": "Mock login screen using dynamic CSS variables"
+}

@@ -3,14 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mock login screen using dynamic CSS variables"
+    />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" defer></script>
     <title>Dynamic CSS Variables</title>
   </head>
   <body>
     <div id="container">
-      <div id="title">Welcome</div>
-      <div id="interface">
+      <h1 id="title">Welcome</h1>
+      <form action="" id="interface">
         <div id="username">
           <input type="text" placeholder="Username" />
         </div>
@@ -18,11 +23,11 @@
           <input type="text" placeholder="Password" />
         </div>
         <div id="buttons">
-          <div id="login">Login</div>
-          <div id="cancel">Cancel</div>
+          <button type="submit" id="login">Login</button>
+          <button type="reset" id="cancel">Cancel</button>
         </div>
-        <div id="success">Logged In!</div>
-      </div>
+        <div role="alert" id="success">Logged In!</div>
+      </form>
     </div>
   </body>
 </html>

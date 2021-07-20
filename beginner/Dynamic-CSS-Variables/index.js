@@ -1,19 +1,8 @@
-const loginButton = document.querySelector('#login');
-const cancelButton = document.querySelector('#cancel');
-const usernameInput = document.querySelector('#username > input');
-const passwordInput = document.querySelector('#password > input');
+const form = document.querySelector('form');
+const usernameInput = form[0];
+const passwordInput = form[1];
 const successMessage = document.querySelector('#success');
-
-cancelButton.addEventListener('click', () => {
-  const resetInput = (eles) => {
-    eles.forEach((ele) => {
-      ele.value = '';
-      ele.removeAttribute('style');
-    });
-  };
-  resetInput([usernameInput, passwordInput]);
-  successMessage.style.display = 'none';
-});
+const creds = { username: 'testuser', password: 'mypassword' };
 
 const validateInput = () => {
   const containSpace = (eles) => {
@@ -46,8 +35,8 @@ const validateInput = () => {
   };
   if (containSpace([usernameInput, passwordInput])) return;
   let res = [
-    matchInput(usernameInput, 'testuser'),
-    matchInput(passwordInput, 'mypassword'),
+    matchInput(usernameInput, creds.username),
+    matchInput(passwordInput, creds.password),
   ];
   if (res[0] && res[1]) {
     successMessage.style.display = 'block';
@@ -56,4 +45,34 @@ const validateInput = () => {
   }
 };
 
-loginButton.addEventListener('click', validateInput);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  validateInput();
+});
+
+form.addEventListener('reset', (e) => {
+  e.preventDefault();
+  const resetInput = (eles) => {
+    eles.forEach((ele) => {
+      ele.value = '';
+      ele.removeAttribute('style');
+    });
+  };
+  resetInput([usernameInput, passwordInput]);
+  successMessage.style.display = 'none';
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+});

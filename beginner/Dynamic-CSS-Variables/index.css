@@ -63,8 +63,6 @@ input:focus {
 
 #buttons {
   --button-size: 1.2rem;
-  -moz-user-select: none;
-  user-select: none;
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
@@ -72,14 +70,17 @@ input:focus {
   font-size: var(--button-size);
 }
 
-#buttons > div {
+button {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
   outline: 2px solid black;
   padding: 0.2rem 0.5rem;
   font-weight: 700;
   cursor: pointer;
 }
 
-#buttons > div:hover {
+button:hover {
   background-color: black;
   color: white;
   outline-offset: 1px;
