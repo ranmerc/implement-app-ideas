@@ -207,10 +207,10 @@ document.querySelectorAll('.summary_item').forEach((s, i) => {
 
 document.querySelector('.expand').addEventListener('click', (e) => {
   if (e.target.getAttribute('src') === './arrow_up.svg') {
-    document.querySelector('#summary').style.transform = 'scale(1)';
+    document.querySelector('#summary').style.transform = 'scaleY(1)';
     e.target.setAttribute('src', './arrow_down.svg');
   } else {
-    document.querySelector('#summary').style.transform = 'scale(0)';
+    document.querySelector('#summary').style.transform = 'scaleY(0)';
     e.target.setAttribute('src', './arrow_up.svg');
   }
 });
