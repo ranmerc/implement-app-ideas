@@ -1,5 +1,5 @@
-const imageURLInput = document.querySelector('#image_url');
-const displayButton = document.querySelector('#load_url');
+const form = document.querySelector('form');
+const imageURLInput = form[0];
 const images = document.querySelectorAll('img');
 const arrows = document.querySelectorAll('.arrow');
 const error = document.querySelector('.error');
@@ -41,7 +41,25 @@ async function loadImage() {
   }
 }
 
-displayButton.addEventListener('click', loadImage);
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  loadImage();
+});
 imageURLInput.addEventListener('focus', () => {
   error.removeAttribute('style');
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
 });

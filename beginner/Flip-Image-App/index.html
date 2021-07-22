@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple Image Rotation App" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <script src="./index.js" defer></script>
     <link rel="stylesheet" href="./index.css" />
     <title>Flip Image App</title>
@@ -12,44 +14,109 @@
       <h1 id="title">Flip Image App</h1>
       <div id="image_container">
         <div class="images">
-          <button class="up_arrow arrow" data-angle="-180"></button>
-          <button class="down_arrow arrow" data-angle="180"></button>
-          <button class="right_arrow arrow" data-angle="90"></button>
-          <button class="left_arrow arrow" data-angle="-90"></button>
+          <button
+            class="up_arrow arrow"
+            data-angle="-180"
+            aria-label="Rotate First Image by -180 degrees"
+          ></button>
+          <button
+            class="down_arrow arrow"
+            data-angle="180"
+            aria-label="Rotate First Image by 180 degrees"
+          ></button>
+          <button
+            class="right_arrow arrow"
+            data-angle="90"
+            aria-label="Rotate First Image by 90 degrees"
+          ></button>
+          <button
+            class="left_arrow arrow"
+            data-angle="-90"
+            aria-label="Rotate First Image by -90 degrees"
+          ></button>
           <img src="./140-300x300.jpg" alt="Rotatable Image" />
         </div>
         <div class="images">
-          <button class="up_arrow arrow" data-angle="-180"></button>
-          <button class="down_arrow arrow" data-angle="180"></button>
-          <button class="right_arrow arrow" data-angle="90"></button>
-          <button class="left_arrow arrow" data-angle="-90"></button>
+          <button
+            class="up_arrow arrow"
+            data-angle="-180"
+            aria-label="Rotate Second Image by -180 degrees"
+          ></button>
+          <button
+            class="down_arrow arrow"
+            data-angle="180"
+            aria-label="Rotate Second Image by  180 degrees"
+          ></button>
+          <button
+            class="right_arrow arrow"
+            data-angle="90"
+            aria-label="Rotate Second Image by 90 degrees "
+          ></button>
+          <button
+            class="left_arrow arrow"
+            data-angle="-90"
+            aria-label="Rotate Second Image by  -90 degrees"
+          ></button>
           <img src="./140-300x300.jpg" alt="Rotatable Image" />
         </div>
         <div class="images">
-          <button class="up_arrow arrow" data-angle="-180"></button>
-          <button class="down_arrow arrow" data-angle="180"></button>
-          <button class="right_arrow arrow" data-angle="90"></button>
-          <button class="left_arrow arrow" data-angle="-90"></button>
+          <button
+            class="up_arrow arrow"
+            data-angle="-180"
+            aria-label="Rotate Third Image by -180 degrees"
+          ></button>
+          <button
+            class="down_arrow arrow"
+            data-angle="180"
+            aria-label="Rotate Third Image by 180 degrees"
+          ></button>
+          <button
+            class="right_arrow arrow"
+            data-angle="90"
+            aria-label="Rotate Third Image by 90 degrees"
+          ></button>
+          <button
+            class="left_arrow arrow"
+            data-angle="-90"
+            aria-label="Rotate Third Image by -90 degrees"
+          ></button>
           <img src="./140-300x300.jpg" alt="Rotatable Image" />
         </div>
         <div class="images">
-          <button class="up_arrow arrow" data-angle="-180"></button>
-          <button class="down_arrow arrow" data-angle="180"></button>
-          <button class="right_arrow arrow" data-angle="90"></button>
-          <button class="left_arrow arrow" data-angle="-90"></button>
+          <button
+            class="up_arrow arrow"
+            data-angle="-180"
+            aria-label="Rotate Fourth Image by -180 degrees "
+          ></button>
+          <button
+            class="down_arrow arrow"
+            data-angle="180"
+            aria-label="Rotate Fourth Image by 180 degrees"
+          ></button>
+          <button
+            class="right_arrow arrow"
+            data-angle="90"
+            aria-label="Rotate Fourth Image by 90 degrees"
+          ></button>
+          <button
+            class="left_arrow arrow"
+            data-angle="-90"
+            aria-label="Rotate Fourth Image by -90 degrees"
+          ></button>
           <img src="./140-300x300.jpg" alt="Rotatable Image" />
         </div>
       </div>
-      <div id="input_container">
+      <form action="/" id="input_container">
         <input
           type="text"
           id="image_url"
+          aria-label="Enter Image URL"
           placeholder="Enter Image URL"
           spellcheck="false"
         />
-        <div class="error">URL Image Not Found!</div>
-        <button id="load_url">Display</button>
-      </div>
+        <div role="alert" class="error">URL Image Not Found!</div>
+        <button type="submit" id="load_url">Display</button>
+      </fo>
     </div>
   </body>
 </html>
