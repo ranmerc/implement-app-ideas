@@ -75,8 +75,13 @@ input[type='submit']:hover,
   background-color: #6c63ff;
 }
 
+input[type='submit']:focus {
+  box-shadow: 0 0 0 2px #6c63ff;
+  outline: none;
+}
+
 label {
-  color: #6c63ff;
+  color: #635bf8;
   font-weight: 800;
 }
 
@@ -86,7 +91,7 @@ label {
 
 .error {
   font-size: 0.75rem;
-  color: red;
+  color: rgb(236, 2, 2);
   opacity: 0;
 }
 
@@ -155,7 +160,8 @@ a {
     display: grid;
     place-content: center;
     height: 100vh;
-    background-color: rgb(211, 211, 211);
+    background: url('./bg.svg') no-repeat center center fixed;
+    background-size: cover;
     overflow: none;
   }
   #container {

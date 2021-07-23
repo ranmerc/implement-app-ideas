@@ -1,0 +1,24 @@
+{
+  "name": "Javascript Validation With Regex",
+  "short_name": "Regex Form",
+  "icons": [
+    {
+      "src": "./icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#6c63ff",
+  "display": "standalone",
+  "scope": ".",
+  "theme_color": "#6c63ff",
+  "description": "Binary To Decimal Converter"
+}

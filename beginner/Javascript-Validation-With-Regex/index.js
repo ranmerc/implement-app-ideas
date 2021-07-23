@@ -1,9 +1,9 @@
-const errors = document.querySelectorAll('.error');
-const emailInput = document.querySelector('#email');
-const usernameInput = document.querySelector('#username');
-const passwordInput = document.querySelector('#password');
-const inputs = [emailInput, usernameInput, passwordInput];
 const form = document.querySelector('form');
+const errors = document.querySelectorAll('.error');
+const emailInput = form[0];
+const usernameInput = form[1];
+const passwordInput = form[2];
+const inputs = [emailInput, usernameInput, passwordInput];
 const modal = document.querySelector('#modal-bg');
 const regex = [
   new RegExp(/.*@gmail\.com$/), // email regex
@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
       hideError(index);
     });
   });
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
     validate();
     if (
       Array.from(errors).every((e) => (e.style.opacity === '0' ? true : false))
@@ -40,4 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
       modal.style.display = 'inline';
     }
   });
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
 });

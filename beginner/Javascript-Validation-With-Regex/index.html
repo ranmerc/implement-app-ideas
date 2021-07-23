@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple Form Validation with Regex" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" defer></script>
     <title>Javascript Validation with Regex</title>
@@ -10,26 +12,26 @@
   <body>
     <div id="container">
       <div id="heading-section">
-        <div id="main-heading">Welcome</div>
-        <div id="sub-heading">Login to Continue</div>
+        <h1 id="main-heading">Welcome</h1>
+        <h2 id="sub-heading">Login to Continue</h2>
       </div>
       <div id="svg-section"></div>
       <div id="form-section">
-        <form action="javascript:void(0)">
+        <form>
           <div>
             <label for="email">Email Address</label>
             <input type="text" id="email" />
-            <div class="error">Only @gmail allowed.</div>
+            <div role="alert" class="error">Only @gmail allowed.</div>
           </div>
           <div>
             <label for="username">Username</label>
             <input type="text" id="username" />
-            <div class="error">Only letters with no spaces.</div>
+            <div role="alert" class="error">Only letters with no spaces.</div>
           </div>
           <div>
             <label for="password">Password</label>
             <input type="password" id="password" />
-            <div class="error">
+            <div role="alert" class="error">
               Requires five(5) capital letters, six (6) symbols and two hyphens
               (-) in any order.
             </div>
