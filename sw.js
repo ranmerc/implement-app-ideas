@@ -32,7 +32,7 @@ self.addEventListener('activate', async (activateEvent) => {
 self.addEventListener('fetch', (fetchEvent) => {
   const request = fetchEvent.request;
   const requestURL = new URL(request.url);
-  const clientURL = allClients ? new URL(allClients[0].url) : 'notthehost';
+  const clientURL = allClients[0] ? new URL(allClients[0].url) : 'notthehost';
   if (requestURL.host === clientURL.host) {
     // temporary fix
     if (requestURL.pathname.includes('/fonts/')) {
