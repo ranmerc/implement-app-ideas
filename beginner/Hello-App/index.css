@@ -19,8 +19,7 @@
   row-gap: 2rem;
   grid-template-areas:
     'title'
-    'input'
-    'button';
+    'input';
 }
 
 .warning {
@@ -47,14 +46,11 @@
 
 input {
   font-size: calc(1rem + 0.2vw);
-  font-weight: 400;
-  line-height: 2.5rem;
+  font-weight: 600;
+  width: max-content;
   border: none;
   outline: 1px solid black;
-}
-
-#button {
-  grid-area: button;
+  padding: 0.5rem;
 }
 
 #login {
@@ -63,7 +59,7 @@ input {
   font-size: calc(1rem + 0.5vw);
   padding: 0.2rem 0.5rem;
   cursor: pointer;
-  margin-left: 0.8rem;
+  border: none;
 }
 
 #login:hover {
@@ -72,8 +68,13 @@ input {
   outline: 2px solid black;
 }
 
-.input_field:nth-of-type(3) {
+.input_field {
   display: flex;
+  flex-direction: column;
+}
+
+.input_field:nth-of-type(3) {
+  flex-direction: row;
   column-gap: 0.5rem;
 }
 
@@ -83,8 +84,8 @@ input {
 
 .input_field:nth-of-type(3) input {
   font-size: 1rem;
-  line-height: 1rem;
-  width: 2rem;
+  padding: 0;
+  width: 4ch;
 }
 
 svg {

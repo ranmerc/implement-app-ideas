@@ -14,9 +14,8 @@ fetch('https://ipwhois.app/json/')
         document.querySelector('.loader').style.display = 'none';
         console.log(json);
         document.querySelector('#hello').innerHTML = json.hello;
-        document.querySelector('#username').innerHTML = localStorage.getItem(
-          'username'
-        );
+        document.querySelector('#username').innerHTML =
+          localStorage.getItem('username');
         document.querySelector('#ip').textContent = ipres.ip;
         document.querySelector('#city').textContent = ipres.city;
         document.querySelector('#region').textContent = ipres.region;
@@ -27,6 +26,7 @@ fetch('https://ipwhois.app/json/')
           document.querySelector('#country').appendChild(flag);
         };
         flag.src = ipres.country_flag;
+        flag.alt = 'Country Flag';
         document.querySelector(
           '#currency'
         ).textContent = `${ipres.currency}(${ipres.currency_symbol})`;
@@ -43,6 +43,6 @@ document.querySelector('#logout').addEventListener('click', () => {
   bye.style.display = 'grid';
   bye.textContent = `Have a great day ${localStorage.getItem('username')}!`;
   setTimeout(() => {
-    window.location.href = './index.html';
+    window.history.back();
   }, 2000);
 });

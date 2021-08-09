@@ -1,10 +1,11 @@
-const username = document.querySelector('#username');
-const password = document.querySelector('#password');
-const languageCode = document.querySelector('#lc');
-const loginButton = document.querySelector('#login');
+const form = document.querySelector('form');
+const username = form[0];
+const password = form[1];
+const languageCode = form[2];
 const warningMessage = document.querySelectorAll('.warning');
 
-loginButton.addEventListener('click', () => {
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
   if (username.value === '' || password.value === '') {
     if (username.value === '') {
       warningMessage[0].style.display = 'block';
@@ -33,4 +34,19 @@ password.addEventListener('focus', () => {
 
 password.addEventListener('keyup', (e) => {
   password.value = '*'.repeat(password.value.length);
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
 });
