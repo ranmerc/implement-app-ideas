@@ -1,0 +1,24 @@
+{
+  "name": "Word Frequency",
+  "short_name": "Frequency",
+  "icons": [
+    {
+      "src": "./icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "./",
+  "background_color": "#121212",
+  "display": "standalone",
+  "scope": ".",
+  "theme_color": "#08fdb4",
+  "description": "Website to count word frequency"
+}
