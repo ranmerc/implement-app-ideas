@@ -1,0 +1,104 @@
+@import url('../../fonts/Roboto/Roboto.css');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  background-color: #121212;
+}
+
+.calculator {
+  display: grid;
+}
+
+.display {
+  background-color: #121212;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: 'Roboto', sans-serif;
+  text-align: end;
+  overflow: hidden;
+}
+
+.display--input {
+  font-size: 5rem;
+  height: 6rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.display--output {
+  font-size: 2rem;
+  height: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.controls {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3fr 1fr;
+}
+
+.controls--numbers {
+  background-color: #2e2e2e;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+}
+
+.controls--numbers > button {
+  padding: 0.3em;
+}
+
+.controls--operators {
+  background-color: #383838;
+  display: grid;
+  padding: 1rem;
+}
+
+button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
+  cursor: pointer;
+  color: white;
+  transition: background-color 500ms, color 500ms;
+}
+
+button:active {
+  background-color: antiquewhite;
+  color: black;
+}
+
+button:active svg {
+  fill: black;
+}
+
+button > * {
+  pointer-events: none;
+}
+
+svg {
+  width: 50px;
+  height: 50px;
+}
+
+button[value='x'],
+button[value='-'],
+button[value='+'] {
+  font-family: monospace;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple Calculator made with vanilla JS" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" defer></script>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <div class="display--input"></div>
+        <div class="display--output"></div>
+      </div>
+      <div class="controls">
+        <div class="controls--numbers">
+          <button value="7">7</button>
+          <button value="8">8</button>
+          <button value="9">9</button>
+          <button value="4">4</button>
+          <button value="5">5</button>
+          <button value="6">6</button>
+          <button value="1">1</button>
+          <button value="2">2</button>
+          <button value="3">3</button>
+          <button value=".">.</button>
+          <button value="0">0</button>
+          <button value="=">=</button>
+        </div>
+        <div class="controls--operators">
+          <button value="delete" aria-label="delete button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="-2 -5 24 24"
+              width="24"
+              height="24"
+              preserveAspectRatio="xMinYMin"
+              class="jam jam-delete"
+              fill="#fff"
+            >
+              <path
+                d="M7.828 0H18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7.828a2 2 0 0 1-1.414-.586L.707 7.707a1 1 0 0 1 0-1.414L6.414.586A2 2 0 0 1 7.828 0zm0 12H18V2H7.828l-5 5 5 5zm6.586-5l1.414 1.414a1 1 0 0 1-1.414 1.414L13 8.414l-1.414 1.414a1 1 0 1 1-1.414-1.414L11.586 7l-1.414-1.414a1 1 0 1 1 1.414-1.414L13 5.586l1.414-1.414a1 1 0 1 1 1.414 1.414L14.414 7z"
+              />
+            </svg>
+          </button>
+          <button value="/" aria-label="divide button">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="#fff"
+            >
+              <path
+                d="M5 11h14v2H5zm7.002-7a2 2 0 1 0-.004 4a2 2 0 0 0 .004-4zm0 12a2 2 0 1 0-.004 4a2 2 0 0 0 .004-4z"
+              />
+            </svg>
+          </button>
+          <button value="*" aria-label="multiply button">x</button>
+          <button value="-" aria-label="subtract button">-</button>
+          <button value="+" aria-label="addition button">+</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
