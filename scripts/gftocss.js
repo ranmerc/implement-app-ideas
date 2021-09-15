@@ -1,3 +1,8 @@
+/* 
+  Download all font files and put them under ./fonts/[Font Name]
+  then execute node gftocss.js [Font Name]
+*/
+
 const fs = require('fs');
 
 if (process.argv.length === 2) {
@@ -67,6 +72,6 @@ Object.keys(fonts).forEach((font, i) => {
   );
 });
 
-const cssFileName = `${fontFolder}/${fontName}.css`;
+const cssFileName = `${fontFolder}/${fontName.replace(/\ /g, '_')}.css`;
 
 fs.writeFileSync(cssFileName, constructedCSS);

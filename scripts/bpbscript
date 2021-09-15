@@ -1,5 +1,6 @@
 # Beginner Project Broilerplate Script
 # run by . bpbscript <project-name>
+
 cd beginner
 mkdir $1
 cd $1
