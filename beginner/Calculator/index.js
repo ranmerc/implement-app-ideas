@@ -68,10 +68,11 @@ function longPressStart(e) {
   if (!timer) timer = setTimeout(longPress, duration);
 }
 
-function longPressEnd() {
+function longPressEnd(e) {
   if (timer) {
     clearTimeout(timer);
     timer = null;
+    e.target.click();
   }
 }
 
