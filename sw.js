@@ -1,4 +1,4 @@
-const fontsCacheVersion = 'v1';
+const fontsCacheVersion = 'v2';
 const fontCacheName = '-font-cache';
 let allClients = [];
 
