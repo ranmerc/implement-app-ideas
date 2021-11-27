@@ -1,6 +1,7 @@
-const systemElement = document.querySelector('#system');
-const tempElement = document.querySelector('#temp');
-const speedElement = document.querySelector('#speed');
+const formElement = document.querySelector('form');
+const systemElement = formElement[0];
+const tempElement = formElement[1];
+const speedElement = formElement[2];
 const formulaElement = document.querySelector('.formula');
 const windchillElement = document.querySelector('.windchill');
 const tempUnitElement = document.querySelector('._temp > .units');
@@ -39,22 +40,40 @@ const metric = (temp, speed) => {
   );
 };
 
-document.querySelector('form').addEventListener('submit', () => {
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
   const speed = speedElement.value;
   const temp = tempElement.value;
   if (!systemElement.selectedIndex && (speed <= 4.8 || temp > 10)) {
     alert(
       'Winchill Factor cannot be calculated for temperatures greater than 10º C and wind speeds lesser than 4.8 kmph'
     );
+    windchillElement.innerText = 'not calculable for these values';
     return;
   } else if (systemElement.selectedIndex && (speed <= 3 || temp > 50)) {
     alert(
       'Winchill Factor cannot be calculated for temperatures greater than 50º F and wind speeds lesser than 3 mph'
     );
+    windchillElement.innerText = 'not calculable for these values';
     return;
   }
   const windchill = systemElement.selectedIndex
     ? `${imperial(temp, speed)}`
     : `${metric(temp, speed)}`;
   windchillElement.innerText = windchill;
+});
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
 });

@@ -14,7 +14,7 @@ body {
 }
 
 main {
-  background-color: #a9b5c2;
+  background-color: rgba(255, 255, 255, 0.726);
   font-family: 'Pangolin', cursive;
   padding: 1.8rem;
   border-radius: 10px;
@@ -107,6 +107,7 @@ input[type='submit']:active {
   main {
     padding: 1rem;
     row-gap: 1rem;
+    border-radius: 0px;
   }
 
   h1 {
