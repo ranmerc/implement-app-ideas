@@ -1,0 +1,25 @@
+{
+    "name": "Meal Gen",
+    "short_name": "RMG",
+    "icons": [
+      {
+        "src": "./icon_512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any"
+      },
+      {
+        "src": "./icon_192.png",
+        "type": "image/png",
+        "sizes": "192x192",
+        "purpose": "any"
+      }
+    ],
+    "start_url": "./",
+    "background_color": "#058b6a",
+    "display": "standalone",
+    "scope": ".",
+    "theme_color": "#058b6a",
+    "description": "Generate random meal recipes"
+  }
+  

@@ -25,8 +25,8 @@ const recipeHTMLBuilder = (recipe) => {
     ingredientNames.map((ing, index) => [ing, ingredientQuantity[index]])
   );
   return `
-  <div class="recipe__details">
-    <div class="recipe__name">${recipe.strMeal}</div>
+  <section class="recipe__details">
+    <h1 class="recipe__name">${recipe.strMeal}</h1>
     <img src="${
       recipe.strMealThumb
     }" alt="Photo Of Recipe" class="recipe__photo" />
@@ -44,8 +44,8 @@ const recipeHTMLBuilder = (recipe) => {
         <span class="attribute_value">${recipe.strTags || '-'}</span>
       </div>
     </div>
-  </div>
-  <div class="recipe__ingredients">
+  </section>
+  <section class="recipe__ingredients">
     <h2 class="recipe__subtitles">Ingredients</h2>
     <ul class="ingredients">
       ${Object.keys(ingredients)
@@ -54,19 +54,19 @@ const recipeHTMLBuilder = (recipe) => {
         })
         .join('')}
     </ul>
-  </div>
-  <div class="recipe__recipe">
+  </section>
+  <section class="recipe__recipe">
     <h2 class="recipe__subtitles">Recipe</h2>
     <p class="instructions">
       ${recipe.strInstructions}
     </p>
-  </div>
-  <div class="recipe__video">
+  </section>
+  <section class="recipe__video">
     <h2 class="recipe__subtitles">Video Recipe</h2>
-    <iframe src="https://www.youtube.com/embed/${
+    <iframe title="Recipe video on youtube" src="https://www.youtube.com/embed/${
       recipe.strYoutube.split('?v=')[1]
     }"></iframe>
-  </div>
+  </section>
   `;
 };
 
@@ -87,3 +87,18 @@ const getRandomRecipe = async (e) => {
 };
 
 generateButton.addEventListener('click', getRandomRecipe);
+
+// window.addEventListener('load', () => {
+//   if ('serviceWorker' in navigator) {
+//     navigator.serviceWorker
+//       .register('/sw.js', { scope: './' })
+//       .then(function () {
+//         console.log('ServiceWorker succesfully registered');
+//       })
+//       .catch(function (err) {
+//         console.log('ServiceWorker registration failed: ', err);
+//       });
+//   } else {
+//     console.log('Service workers are not supported.');
+//   }
+// });

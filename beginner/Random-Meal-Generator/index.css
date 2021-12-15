@@ -15,7 +15,7 @@
   --interact-title-size: 2.7rem;
   --interact-button-size: 1.1rem;
   --secondary-color: #6b5e5e;
-  --primary-color: #199577;
+  --primary-color: #058b6a;
 }
 
 .main {
@@ -69,7 +69,7 @@
 }
 
 button {
-  background-color: #199577;
+  background-color: var(--primary-color);
   border: none;
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
@@ -80,12 +80,12 @@ button {
 }
 
 button:focus {
-  outline: 2px solid #199577;
+  outline: 2px solid var(--primary-color);
   outline-offset: 2px;
 }
 
 button:not(:focus):hover {
-  box-shadow: 0 0 0 1px white, 0 0 0 3px #199577;
+  box-shadow: 0 0 0 1px white, 0 0 0 3px var(--primary-color);
 }
 
 .interact__button {
@@ -108,7 +108,7 @@ button:not(:focus):hover {
 }
 
 .recipe__name {
-  color: #199577;
+  color: var(--primary-color);
   font-family: 'Zilla Slab', serif;
   font-size: 3rem;
   font-weight: 700;
@@ -121,7 +121,7 @@ button:not(:focus):hover {
 
 .attribute_name {
   font-family: 'Zilla Slab', serif;
-  color: #199577;
+  color: var(--primary-color);
   font-weight: 700;
   font-size: 1.15rem;
 }
@@ -136,7 +136,7 @@ button:not(:focus):hover {
 .recipe__subtitles {
   all: unset;
   font-family: 'Zilla Slab', sans-serif;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
   text-decoration: underline;
   color: var(--primary-color);
   font-weight: 700;
@@ -170,6 +170,7 @@ li::marker {
 
 .instructions {
   margin-left: 0.5rem;
+  line-height: 1.7rem;
 }
 
 .recipe__photo {
