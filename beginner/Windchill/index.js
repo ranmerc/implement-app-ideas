@@ -66,7 +66,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker
-      .register('/sw.js', { scope: './' })
+      .register('../../sw.js', { scope: './' })
       .then(function () {
         console.log('ServiceWorker succesfully registered');
       })
