@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple image sliding carousel" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="manifest" href="./manifest.webmanifest" />
     <link rel="stylesheet" href="./index.css" />
     <script src="./index.js" defer></script>
     <title>Slider Design</title>
@@ -20,6 +22,7 @@
             height="30"
             viewBox="0 0 19 30"
             fill="none"
+            aria-label="Left arrow - Go to previous image"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -29,21 +32,21 @@
         </button>
         <div class="sliding-container">
           <div class="slider">
-            <div class="sliding">
-              <img src="./277-480x360.jpg" alt="image-1" />
-            </div>
-            <div class="sliding">
-              <img src="./411-480x360.jpg" alt="image-1" />
-            </div>
-            <div class="sliding">
-              <img src="./530-480x360.jpg" alt="image-1" />
-            </div>
-            <div class="sliding">
-              <img src="./802-480x360.jpg" alt="image-1" />
-            </div>
-            <div class="sliding">
-              <img src="./925-480x360.jpg" alt="image-1" />
-            </div>
+            <figure class="sliding">
+              <img src="./277-480x360.jpg" alt="Open Fields" />
+            </figure>
+            <figure class="sliding">
+              <img src="./411-480x360.jpg" alt="City Skyscrapers" />
+            </figure>
+            <figure class="sliding">
+              <img src="./530-480x360.jpg" alt="Plants" />
+            </figure>
+            <figure class="sliding">
+              <img src="./802-480x360.jpg" alt="Architecture Papers" />
+            </figure>
+            <figure class="sliding">
+              <img src="./925-480x360.jpg" alt="Misty Mountains" />
+            </figure>
           </div>
         </div>
         <button class="arrow arrow-right">
@@ -52,6 +55,7 @@
             height="30"
             viewBox="0 0 19 30"
             fill="none"
+            aria-label="Left arrow - Go to previous image"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path

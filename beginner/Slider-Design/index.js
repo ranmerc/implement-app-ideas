@@ -20,3 +20,18 @@ leftArrow.addEventListener('click', slideLeft);
 // setInterval(() => {
 //   slideRight();
 // }, 5000);
+
+window.addEventListener('load', () => {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('../../sw.js', { scope: './' })
+      .then(function () {
+        console.log('ServiceWorker succesfully registered');
+      })
+      .catch(function (err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+  } else {
+    console.log('Service workers are not supported.');
+  }
+});
