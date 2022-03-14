@@ -1,6 +1,6 @@
 # Key Value
 
-Simple project that displays the Key and KeyCode of the pressed key, based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Key-Value-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Key-Value-App/build/index.html).
+Simple project that displays the Key and KeyCode of the pressed key, based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Key-Value-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Key-Value-App/build/index.html).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Used to make sound on keypress.
 
 ## Install
 
-    $ git clone https://github.com/deadmercury/implement-app-ideas
+    $ git clone https://github.com/ranmerc/implement-app-ideas
     $ cd implement-app-ideas/beginner/Key-Value-App
     $ npm install
 

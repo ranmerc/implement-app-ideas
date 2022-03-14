@@ -1,6 +1,6 @@
 # JSON2CSV
 
-Basic JSON2CSV Converter based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/JSON2CSV-App.md). Deployed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/JSON2CSV/index.html).
+Basic JSON2CSV Converter based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/JSON2CSV-App.md). Deployed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/JSON2CSV/index.html).
 
 ## References
 

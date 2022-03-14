@@ -1,6 +1,6 @@
 # Lorem Ipsum Generator
 
-A simple lorem generator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Lorem-Ipsum-Generator.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Lorem-Ipsum-Generator/build/index.html).
+A simple lorem generator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Lorem-Ipsum-Generator.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Lorem-Ipsum-Generator/build/index.html).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Used to generate lorem ipsum text.
 
 ## Install
 
-    $ git clone https://github.com/deadmercury/implement-app-ideas
+    $ git clone https://github.com/ranmerc/implement-app-ideas
     $ cd implement-app-ideas/beginner/Lorem-Ipsum-Generator
     $ npm install
 

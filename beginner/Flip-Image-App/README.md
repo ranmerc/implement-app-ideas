@@ -1,6 +1,6 @@
 # Flip Image App
 
-Simple Image Rotation App based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Flip-Image-App.md). It was supposed to be flipping the images but I misinterpreted the challenge so it rotates. Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Flip-Image-App/index.html).
+Simple Image Rotation App based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Flip-Image-App.md). It was supposed to be flipping the images but I misinterpreted the challenge so it rotates. Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Flip-Image-App/index.html).
 
 ## References
 

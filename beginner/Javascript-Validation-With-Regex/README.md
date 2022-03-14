@@ -1,6 +1,6 @@
 # Javascript Validation With Regex
 
-Simple Form Validation with Regex. Based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Javascript-Validation-With-Regex.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Javascript-Validation-With-Regex/index.html).
+Simple Form Validation with Regex. Based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Javascript-Validation-With-Regex.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Javascript-Validation-With-Regex/index.html).
 
 ## References
 

@@ -1,6 +1,6 @@
 # Windchill
 
-A simple Windchill calculator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Windchill-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Windchill/index.html).
+A simple Windchill calculator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Windchill-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Windchill/index.html).
 
 ## References
 

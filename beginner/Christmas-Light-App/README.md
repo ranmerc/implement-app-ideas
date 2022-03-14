@@ -1,6 +1,6 @@
 # Christmas Lights App
 
-Small project based on idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Christmas-Lights-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Christmas-Light-App/index.html).
+Small project based on idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Christmas-Lights-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Christmas-Light-App/index.html).
 
 ## References
 

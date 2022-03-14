@@ -1,6 +1,6 @@
 # Random Meal Generator
 
-A simple random recipe generator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Random-Meal-Generator.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Random-Meal-Generator/index.html).
+A simple random recipe generator based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Random-Meal-Generator.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Random-Meal-Generator/index.html).
 
 ## References
 

@@ -1,6 +1,6 @@
 # Dollars to Cents
 
-Small simple project based on idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Dollars-To-Cents-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Dollars-to-Cents/index.html).
+Small simple project based on idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Dollars-To-Cents-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Dollars-to-Cents/index.html).
 
 ## References
 

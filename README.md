@@ -1,1 +1,1 @@
-[Published Here](https://deadmercury.github.io/implement-app-ideas/)
+[Published Here](https://ranmerc.github.io/implement-app-ideas/)

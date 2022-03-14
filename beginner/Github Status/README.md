@@ -1,6 +1,6 @@
 # Github Status
 
-Simple Github Status tracker based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/GitHub-Status-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Github%20Status/build/index.html).
+Simple Github Status tracker based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/GitHub-Status-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Github%20Status/build/index.html).
 
 ## Requirements
 
@@ -16,7 +16,7 @@ Used to get the current [github status](https://www.githubstatus.com/) in json f
 
 ## Install
 
-    $ git clone https://github.com/deadmercury/implement-app-ideas
+    $ git clone https://github.com/ranmerc/implement-app-ideas
     $ cd implement-app-ideas/beginner/Github\ Status
     $ npm install
 

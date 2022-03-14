@@ -1,6 +1,6 @@
 # Border Radius Previewer
 
-Border radius property previewer based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Border-Radius-Previewer.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Border-radius%20Previewer/index.html).
+Border radius property previewer based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Border-Radius-Previewer.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Border-Radius-Previewer/index.html).
 
 ## References
 

@@ -1,6 +1,6 @@
 # Word Frequency
 
-A simple Word Frequency Counter based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Word-Frequency-App.md). Depolyed on Github Pages [here](https://deadmercury.github.io/implement-app-ideas/beginner/Word-Frequency/index.html).
+A simple Word Frequency Counter based on project idea from [app-ideas repo](https://github.com/florinpop17/app-ideas/blob/master/Projects/1-Beginner/Word-Frequency-App.md). Depolyed on Github Pages [here](https://ranmerc.github.io/implement-app-ideas/beginner/Word-Frequency/index.html).
 
 ## References
 
