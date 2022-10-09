@@ -1,0 +1,20 @@
+@import '@radix-ui/colors/cyan.css';
+@import '@radix-ui/colors/cyanDark.css';
+@import '@radix-ui/colors/slate.css';
+@import '@radix-ui/colors/slateDark.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--slate1);
+}
+
+.App {
+  margin: 2.5rem 1rem;
+}

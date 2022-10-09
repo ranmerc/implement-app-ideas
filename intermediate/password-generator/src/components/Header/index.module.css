@@ -1,0 +1,18 @@
+.container {
+  color: var(--cyan12);
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  color: inherit;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
