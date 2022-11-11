@@ -1,0 +1,16 @@
+.output {
+  width: 100%;
+  resize: auto;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  resize: none;
+  padding: 0.5em 0.6em;
+  font-size: 1.2rem;
+  border-color: var(--slate6);
+  background-color: var(--slate3);
+  color: var(--cyan12);
+}
+
+.output:focus {
+  background-color: var(--slate5);
+}

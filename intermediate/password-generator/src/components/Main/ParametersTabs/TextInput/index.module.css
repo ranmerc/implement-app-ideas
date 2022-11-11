@@ -1,0 +1,23 @@
+.inputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--cyan12);
+  font-size: 1.25rem;
+}
+
+.input {
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--cyan7);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--cyan12);
+  font-size: 1.2rem;
+  width: 4ch;
+  background-color: transparent;
+  text-align: right;
+}

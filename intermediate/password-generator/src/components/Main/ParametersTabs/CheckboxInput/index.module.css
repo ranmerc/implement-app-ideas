@@ -1,0 +1,35 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--cyan12);
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleContainer {
+  display: flex;
+  column-gap: 0.2rem;
+  align-items: baseline;
+}
+
+.sup {
+  font-size: 1.25rem;
+}
+
+.sub {
+  font-size: 0.75rem;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--cyan7);
+}
+
+.checkbox[data-state='unchecked'] {
+  background-color: var(--cyan3);
+}
+
+.checkbox[data-state='checked'] {
+  background-color: var(--cyan8);
+}

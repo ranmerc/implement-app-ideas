@@ -1,0 +1,30 @@
+.label {
+  padding: 0.5rem 0;
+  border: none;
+  text-align: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: var(--cyan12);
+}
+
+.label[data-state='active'] {
+  background-color: var(--cyan7);
+}
+
+.label[data-state='inactive'] {
+  background-color: var(--cyan3);
+}
+
+.buttonGroup {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.buttonGroup .label:nth-child(2) {
+  border-radius: 0 5px 0 0;
+}
+
+.buttonGroup .label:nth-child(1) {
+  border-radius: 5px 0 0 0;
+}
