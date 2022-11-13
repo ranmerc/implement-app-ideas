@@ -6,11 +6,13 @@ export default function TextInput({
   inputLabel,
   defaultValue = '',
   title,
+  maxLength,
 }: {
   id: string;
   inputLabel: string;
   defaultValue?: string;
   title: string;
+  maxLength: number;
 }) {
   const [value, setValue] = useState(defaultValue);
 
@@ -30,6 +32,7 @@ export default function TextInput({
             }}
             className={Styles.input}
             title={title}
+            maxLength={maxLength}
           />
         </div>
       </div>

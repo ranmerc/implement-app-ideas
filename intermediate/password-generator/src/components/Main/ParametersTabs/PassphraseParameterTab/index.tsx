@@ -20,6 +20,7 @@ export default function PassphraseParameterTab() {
           title="Word Separator"
           id="word-separator"
           defaultValue="-"
+          maxLength={1}
         />
         <CheckboxInput id="capitalise" title="Capitalise" />
         <CheckboxInput id="include-numbers" title="Include Numbers" />
