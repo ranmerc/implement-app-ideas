@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--cyan12);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
