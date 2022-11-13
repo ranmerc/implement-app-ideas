@@ -1,6 +1,6 @@
 .container {
   padding: 1.5rem 0.5rem 1rem;
-  border: 2px solid var(--cyan7);
+  border: 1px solid var(--cyan7);
   display: grid;
   row-gap: 1rem;
 }
