@@ -1,13 +1,12 @@
-import CopySVG from '../../../assets/CopySVG';
-import RefreshSVG from '../../../assets/RefreshSVG';
-import Button from './Button';
+import CopyPasswordButton from './CopyPasswordButton';
+import GeneratePasswordButton from './GeneratePasswordButton';
 import Styles from './index.module.css';
 
-export default function MainButton() {
+export default function ButtonLayout() {
   return (
     <div className={Styles.container}>
-      <Button title="Generate Password">{RefreshSVG}Generate Password</Button>
-      <Button title="Copy Password">{CopySVG}Copy Password</Button>
+      <GeneratePasswordButton />
+      <CopyPasswordButton />
     </div>
   );
 }
