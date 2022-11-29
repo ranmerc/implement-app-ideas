@@ -1,24 +1,34 @@
+import usePasswordHistoryStore from '../../../store/usePasswordHistoryStore';
 import GeneratedPassword from './GeneratedPassword';
 import Styles from './index.module.css';
 
 export default function PasswordHistory() {
+  const passwordList = usePasswordHistoryStore((state) => state.list);
+  const clearList = usePasswordHistoryStore((state) => state.clearList);
+
   return (
     <>
       <section className={Styles.container}>
-        <h1 className={Styles.heading}>Password History</h1>
+        <div className={Styles.header}>
+          <h1 className={Styles.heading}>Password History</h1>
+          <button
+            title="Clear Password History"
+            onClick={clearList}
+            className={Styles.clearButton}
+          >
+            Clear
+          </button>
+        </div>
         <ul className={Styles.list}>
-          <li>
-            <GeneratedPassword
-              password="23j$la@jds%fjk20k#ljd"
-              timestamp={'Sep 8, 2022, 3:05:13 PM'}
-            />
-          </li>
-          <li>
-            <GeneratedPassword
-              password="23j$la@jds%fjk20k#ljd"
-              timestamp={'Sep 8, 2022, 3:05:13 PM'}
-            />
-          </li>
+          {passwordList.map((password) => {
+            return (
+              <GeneratedPassword
+                password={password.password}
+                timestamp={password.timestamp}
+                key={password.password + password.timestamp}
+              />
+            );
+          })}
         </ul>
       </section>
     </>

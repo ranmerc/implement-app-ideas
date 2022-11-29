@@ -26,6 +26,7 @@ export default function CopyPasswordButton() {
             color: 'var(--cyan12)',
             fontFamily: 'Inter, sans-serif',
             fontSize: '1.2rem',
+            boxShadow: 'none',
           },
         }}
       />

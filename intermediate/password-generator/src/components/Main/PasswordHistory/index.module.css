@@ -4,6 +4,25 @@
   row-gap: 1rem;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.clearButton {
+  border: none;
+  padding: 0.4rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  background-color: var(--cyan3);
+  color: var(--cyan12);
+}
+
+.clearButton:active {
+  border-color: var(--cyan7);
+  background-color: var(--cyan5);
+}
+
 .heading {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
