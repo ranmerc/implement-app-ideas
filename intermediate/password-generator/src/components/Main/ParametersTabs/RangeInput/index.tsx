@@ -1,5 +1,4 @@
 import { Root, Track, Range, Thumb } from '@radix-ui/react-slider';
-import { useState } from 'react';
 import Styles from './index.module.css';
 
 export default function RangeInput({
@@ -9,6 +8,8 @@ export default function RangeInput({
   inputLabel,
   defaultValue,
   title,
+  value,
+  setValue,
 }: {
   id: string;
   min: number;
@@ -16,9 +17,9 @@ export default function RangeInput({
   inputLabel: string;
   defaultValue: number;
   title: string;
+  value: number;
+  setValue: (value: number) => void;
 }) {
-  const [value, setValue] = useState(defaultValue);
-
   return (
     <>
       <div className={Styles.container}>

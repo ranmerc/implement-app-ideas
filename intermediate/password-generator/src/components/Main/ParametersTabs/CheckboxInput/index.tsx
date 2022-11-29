@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Styles from './index.module.css';
 import { Root, Indicator } from '@radix-ui/react-checkbox';
 
@@ -6,13 +5,15 @@ export default function CheckboxInput({
   id,
   title,
   titleSub,
+  checked,
+  toggleChecked,
 }: {
   id: string;
   title: string;
   titleSub?: string;
+  checked: boolean;
+  toggleChecked: () => void;
 }) {
-  const [checked, setChecked] = useState(false);
-
   return (
     <>
       <div className={Styles.container}>
@@ -24,9 +25,7 @@ export default function CheckboxInput({
           id={id}
           title={title}
           checked={checked}
-          onCheckedChange={() => {
-            setChecked((state) => !state);
-          }}
+          onCheckedChange={toggleChecked}
           className={Styles.checkbox}
         >
           <Indicator />

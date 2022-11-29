@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import Styles from './index.module.css';
 
 export default function TextInput({
@@ -7,15 +6,17 @@ export default function TextInput({
   defaultValue = '',
   title,
   maxLength,
+  value,
+  setValue,
 }: {
   id: string;
   inputLabel: string;
   defaultValue?: string;
   title: string;
   maxLength: number;
+  value: string;
+  setValue: (value: string) => void;
 }) {
-  const [value, setValue] = useState(defaultValue);
-
   return (
     <>
       <div className={Styles.container}>
