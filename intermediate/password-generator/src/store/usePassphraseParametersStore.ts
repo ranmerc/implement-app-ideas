@@ -1,5 +1,5 @@
-import create from 'zustand';
-import { devtools, persist } from 'zustand/middleware';
+import create from "zustand";
+import { devtools, persist } from "zustand/middleware";
 
 export interface PassphraseParameters {
   numberOfWords: number;
@@ -16,7 +16,7 @@ const usePassphraseParametersStore = create<PassphraseParameters>()(
   devtools(
     persist((set) => ({
       numberOfWords: 5,
-      wordSeparator: '-',
+      wordSeparator: "-",
       includeNumbers: false,
       capitalize: false,
       setNumberOfWords: (value: number) =>
