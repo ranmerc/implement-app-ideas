@@ -1,8 +1,9 @@
-import usePasswordParametersStore from '../../../../store/usePasswordParametersStore';
-import CheckboxInput from '../CheckboxInput';
-import RangeInput from '../RangeInput';
-import TabLayout from '../TabLayout';
-import Styles from './index.module.css';
+import { useEffect } from "react";
+import usePasswordParametersStore from "../../../../store/usePasswordParametersStore";
+import CheckboxInput from "../CheckboxInput";
+import RangeInput from "../RangeInput";
+import TabLayout from "../TabLayout";
+import Styles from "./index.module.css";
 
 export default function PasswordParameter() {
   const [length, setLength] = usePasswordParametersStore((state) => [
@@ -29,6 +30,12 @@ export default function PasswordParameter() {
     state.symbols,
     state.toggleSymbols,
   ]);
+
+  useEffect(() => {
+    if (!capital && !numbers && !small && !symbols) {
+      toggleSmall();
+    }
+  }, [capital, numbers, small, symbols]);
 
   return (
     <>
