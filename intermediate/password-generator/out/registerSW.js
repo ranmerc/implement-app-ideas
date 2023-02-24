@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/implement-app-ideas/intermediate/password-generator/out/sw.js', { scope: '/implement-app-ideas/intermediate/password-generator/out/' })})}
