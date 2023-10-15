@@ -29,7 +29,10 @@ export default defineConfig({
       },
     }),
   ],
-  base: "/implement-app-ideas/intermediate/password-generator/out/",
+  base:
+    process.env.NODE_ENV === "production"
+      ? "/implement-app-ideas/intermediate/password-generator/out/"
+      : "/",
   build: {
     outDir: "./out",
   },
