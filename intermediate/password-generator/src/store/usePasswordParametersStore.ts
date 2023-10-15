@@ -19,7 +19,7 @@ const usePasswordParametersStore = create<PasswordParameters>()(
     persist((set) => ({
       length: 10,
       capital: false,
-      small: false,
+      small: true,
       numbers: false,
       symbols: false,
       setLength: (value: number) =>
